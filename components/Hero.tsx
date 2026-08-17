@@ -1,4 +1,3 @@
-import React from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { cn } from "@/lib/utils";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
@@ -7,7 +6,7 @@ import { HiArrowCircleRight } from "react-icons/hi";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-neutral-950">
+    <section id="home" className="relative flex min-h-screen w-full items-center justify-center overflow-hidden">
       {/* Spotlights */}
       <Spotlight
         className="-top-40 -left-10 h-screen md:-left-32 md:-top-20"
@@ -40,7 +39,6 @@ const Hero = () => {
           pointer-events-none
           absolute
           inset-0
-          bg-neutral-950
           mask-[radial-gradient(ellipse_at_center,transparent_20%,black)]
         "
       />
@@ -50,7 +48,7 @@ const Hero = () => {
         <div className="flex w-full flex-col items-center justify-center px-6 text-white sm:px-8 md:px-12 lg:px-16">
 
           {/* Small heading */}
-          <h2 className="mb-6 max-w-80 text-center text-s uppercase tracking-widest text-blue-200">
+          <h2 className="mb-6 max-w-80 text-center text-s uppercase tracking-widest text-blue-200 sm:text-base">
             CURIOUS BY DEFAULT
           </h2>
 

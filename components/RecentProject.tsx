@@ -1,5 +1,3 @@
-import React from 'react'
-import { div } from 'three/src/nodes/math/OperatorNode.js'
 import { projects } from '../data/index'
 import { PinContainer } from "@/components/ui/3d-pin";
 import { FaLocationArrow } from "react-icons/fa";
@@ -13,9 +11,9 @@ const RecentProjects = () => {
             </span>
         </h1>
 
-        <div className="flex flex-wrap items-center justify-center gap-x-4 lg:gap-x-12">            
+        <div className="flex flex-wrap items-center justify-center gap-x-12">            
             {projects.map(({id, title, des, img, iconLists, link}) => (
-                <div key = {id} className ="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw] ">
+                <div key = {id} className ="lg:min-h-130 h-100 flex items-center justify-center sm:w-96 w-[80vw] ">
                     <PinContainer title = {link} href = {link}>
                         <div className="relative flex items-center justify-center lg:h-[30vh] mb-2 sm:w-96 w-[80vw] overflow-hidden h-[20vh] ">
                             <div className="absolute w-full h-full overflow-hidden rounded-3xl bg-[#13162d]">
@@ -53,8 +51,8 @@ const RecentProjects = () => {
                                 ))}
                             </div>
                             <div className = "flex items-center justify-center">
-                                <p className = "text-sm md:text-xs lg:text-xl flext pr-2 text-yellow-300"> Check it out  </p>
-                                <FaLocationArrow  className='ms' color = "#FCD34D"/>
+                                <p className = "text-sm md:text-xs lg:text-xl flex px-2 text-yellow-300"> Check it out  </p>
+                                <FaLocationArrow  className='ms-2' color = "#FCD34D"/>
                             </div>
 
                         </div>

@@ -1,6 +1,6 @@
- "use client";
+"use client";
+
 import React from "react";
-import { motion } from "motion/react";
 import dynamic from "next/dynamic";
 
 const World = dynamic(() => import("./Globe").then((m) => m.World), {
@@ -26,11 +26,16 @@ export function GlobeDemo() {
     arcLength: 0.9,
     rings: 1,
     maxRings: 3,
-    initialPosition: { lat: 22.3193, lng: 114.1694 },
+    initialPosition: {
+      lat: 22.3193,
+      lng: 114.1694,
+    },
     autoRotate: true,
     autoRotateSpeed: 0.5,
   };
+
   const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
+
   const sampleArcs = [
     {
       order: 1,
@@ -395,11 +400,38 @@ export function GlobeDemo() {
   ];
 
   return (
-    <div className="flex items-center justify-center absolute -left-5 top-20 md:top-40 w-full h-full">
-      <div className="max-w-7xl mx-auto w-full relative px-4 h-96"> 
-        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
-        <div className="absolute w-full h-72 md:h-full z-10">
-          <World data={sampleArcs} globeConfig={globeConfig} />
+    <div className="absolute inset-0 flex items-end justify-center overflow-hidden">
+      <div
+        className="
+          relative
+          w-[360px] h-[360px]
+          sm:w-[420px] sm:h-[420px]
+          lg:w-[500px] lg:h-[500px]
+        "
+      >
+        {/* Bottom fade */}
+        <div
+          className="
+            absolute
+            w-full
+            h-40
+            bottom-0
+            inset-x-0
+            bg-gradient-to-b
+            from-transparent
+            to-black
+            pointer-events-none
+            select-none
+            z-40
+          "
+        />
+
+        {/* Globe */}
+        <div className="absolute inset-0 z-10">
+          <World
+            data={sampleArcs}
+            globeConfig={globeConfig}
+          />
         </div>
       </div>
     </div>

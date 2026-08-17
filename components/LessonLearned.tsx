@@ -1,4 +1,3 @@
-import React from 'react'
 import { InfiniteMovingCards } from './ui/InfiniteMovingCards'
 import { learnings } from '@/data/index'
 

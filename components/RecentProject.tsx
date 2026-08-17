@@ -5,7 +5,7 @@ import { PinContainer } from "@/components/ui/3d-pin";
 import { FaLocationArrow } from "react-icons/fa";
 const RecentProjects = () => {
   return (
-    <div className = "py-10 flex flex-col items-center justify-center">
+    <div id = "projects" className = "py-10 flex flex-col items-center justify-center">
         <h1 className="heading text-center md:text-3xl text-2xl font-bold">
             A small selection of {' '}
             <span className = 'text-yellow-300'>

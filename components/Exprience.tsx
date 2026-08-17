@@ -4,7 +4,7 @@ import {Button, MovingBorder} from './ui/MovingBorder'
 const Exprience = () => {
   return (
     <div className="py-6 flex flex-col items-center justify-center">
-      <h1 className="heading text-center md:text-3xl text-2xl font-bold"> 
+      <h1 className="heading text-center md:text-3xl text-2xl mb-10 font-bold"> 
         Experience {' '}
         <span className="text-yellow-300">
           & {' '}

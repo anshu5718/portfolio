@@ -7,7 +7,7 @@ import { HiArrowCircleRight } from "react-icons/hi";
 
 const Hero = () => {
   return (
-    <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-neutral-950">
+    <section id="home" className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-neutral-950">
       {/* Spotlights */}
       <Spotlight
         className="-top-40 -left-10 h-screen md:-left-32 md:-top-20"
@@ -48,7 +48,7 @@ const Hero = () => {
       {/* Main content */}
       <div className="relative z-10 flex w-full items-center justify-center">
         <div className="flex w-full flex-col items-center justify-center px-6 text-white sm:px-8 md:px-12 lg:px-16">
-          
+
           {/* Small heading */}
           <h2 className="mb-6 max-w-80 text-center text-s uppercase tracking-widest text-blue-200">
             CURIOUS BY DEFAULT
@@ -62,12 +62,12 @@ const Hero = () => {
 
           {/* Description */}
           <p className="mt-6 w-full max-w-3xl text-center text-sm leading-relaxed text-neutral-300 md:text-lg md:tracking-wider lg:text-2xl">
-            I'm Bisaka, a developer exploring the space between an idea and the
-            system that makes it work.
+            I'm Bisaka, a web developer exploring the space
+            between an idea and the system that makes it work.
           </p>
 
           {/* Button */}
-          <a href="#about" className="mt-8">
+          <a href="#projects" className="mt-8">
             <MagicButton
               title="Show my work"
               icon={

@@ -1,9 +1,10 @@
 export const navItems = [
-  { name: "About", link: "#about" },
+  { name: "Home", link: "#home" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Learnings", link: "#learnings" },
   { name: "Contact", link: "#contact" },
 ];
+
 
 export const gridItems = [
   {
@@ -108,7 +109,7 @@ export const projects = [
     des: "Still building, learning, and experimenting. More projects and ideas will be added here as I continue the journey.",
     img: "/coming.png",
     iconLists: ["/fastapi.svg", "next.svg" ,"/redis.svg", "/dock.svg", "/postgres.svg", "/git.svg"],
-    link: "www.linkedin.com/in/bisaka-shrestha-53a78b322",
+    link: "https://www.linkedin.com/in/bisaka-shrestha-53a78b322/",
   },
 ];
 
@@ -222,13 +223,16 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link: "https://github.com/anshu5718",
   },
   {
     id: 2,
-    img: "/twit.svg",
+    img: "/insta.svg",
+    link: "https://www.instagram.com/anshu18_stha/",
   },
   {
     id: 3,
     img: "/link.svg",
+    link: "https://www.linkedin.com/in/bisaka-shrestha-53a78b322/",
   },
 ];

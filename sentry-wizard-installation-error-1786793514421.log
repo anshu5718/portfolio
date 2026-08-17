@@ -1,0 +1,13 @@
+(node:2032) [DEP0170] DeprecationWarning: The URL git+ssh://git@github.com:react-icons/react-icons.git is invalid. Future versions of Node.js will throw an error.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:2032) [DEP0184] DeprecationWarning: Instantiating Unzip without the 'new' keyword has been deprecated.
+npm ERR! Windows_NT 10.0.26200
+npm ERR! argv "C:\\Program Files\\nodejs\\node.exe" "D:\\portfolio_nextjs\\node_modules\\npm\\bin\\npm-cli.js" "install" "@sentry/nextjs@10"
+npm ERR! node v24.18.0
+npm ERR! npm  v2.15.12
+npm ERR! code EPEERINVALID
+
+npm ERR! peerinvalid The package ajv@6.15.0 does not satisfy its siblings' peerDependencies requirements!
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     D:\portfolio_nextjs\npm-debug.log

@@ -7,7 +7,7 @@ export const TextGenerateEffect = ({
   words,
   className,
   filter = true,
-  duration = 0.5,
+  duration = 1,
 }: {
   words: string;
   className?: string;
@@ -24,8 +24,8 @@ export const TextGenerateEffect = ({
         filter: filter ? "blur(0px)" : "none",
       },
       {
-        duration: duration ? duration : 1,
-        delay: stagger(0.2),
+        duration: duration ? duration : 3,
+        delay: stagger(0.15),
       }
     );
   }, [scope.current]);
@@ -39,7 +39,7 @@ export const TextGenerateEffect = ({
               key={word + idx}
               className={` ${idx > 5 ? 'text-yellow-300' : 'dark:text-white'} opacity-0`}              
               style={{
-                filter: filter ? "blur(10px)" : "none",
+                filter: filter ? "blur(3px)" : "none",
               }}
             >
               {word}{" "}

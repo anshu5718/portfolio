@@ -84,19 +84,32 @@ function SkillItem({
     [0.55, 1, 0.55]
   );
 
+  // Text: yellow-300 when active
   const color = useTransform(
     progress,
     [start, peak, end],
     ["#ffffffcc", "#fde047", "#ffffffcc"]
   );
 
+  // Border: yellow-300 when active
+  const borderColor = useTransform(
+    progress,
+    [start, peak, end],
+    [
+      "rgba(253, 224, 71, 0)",
+      "#fde047",
+      "rgba(253, 224, 71, 0)",
+    ]
+  );
+
+  // Yellow glow when active
   const boxShadow = useTransform(
     progress,
     [start, peak, end],
     [
-      "0 0 0px rgba(250,204,21,0)",
-      "0 0 14px rgba(250,204,21,0.3)",
-      "0 0 0px rgba(250,204,21,0)",
+      "0 0 0px rgba(253,224,71,0)",
+      "0 0 14px rgba(253,224,71,0.3)",
+      "0 0 0px rgba(253,224,71,0)",
     ]
   );
 
@@ -106,12 +119,15 @@ function SkillItem({
         scale,
         opacity,
         color,
+        borderColor,
         boxShadow,
       }}
       className="
         origin-center
         whitespace-nowrap
         rounded-lg
+        border
+        border-transparent
         bg-[#10132E]
         px-3
         py-2

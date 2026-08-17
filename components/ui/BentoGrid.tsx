@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { BackgroundGradientAnimation } from "./Gradiebtbg";
+import { BackgroundGradientAnimation } from "./Gradientbg";
 import { useState } from "react";
 import {GlobeDemo} from "@/components/ui/GridGlobe";
 import Lottie from "react-lottie";
@@ -91,7 +91,7 @@ export const BentoGridItem = ({
           className={cn( 
             titleClassName, 'group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10')} 
         >
-          <div className="font-sans  font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base  dark:text-neutral-300 z-10">
+          <div className="font-sans font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base  dark:text-neutral-300 z-10">
           {description}
           </div>
           <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10">

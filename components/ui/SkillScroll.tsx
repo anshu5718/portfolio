@@ -24,7 +24,7 @@ export default function SkillsScroll() {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 100%", "end 0%"],
+    offset: ["start 90%", "end 20%"],
   });
 
   return (
@@ -32,17 +32,11 @@ export default function SkillsScroll() {
       ref={containerRef}
       className="
         relative
-        mt-6
         w-full
-        lg:absolute
-        lg:right-4
-        lg:top-1/2
-        lg:mt-0
-        lg:w-[52%]
-        lg:-translate-y-1/2
+        mt-3
       "
     >
-      <div className="grid grid-cols-2 gap-2 lg:gap-1">
+      <div className="grid grid-cols-2 gap-2">
         {skills.map((skill, index) => (
           <SkillItem
             key={skill}
@@ -69,46 +63,47 @@ function SkillItem({
   progress: MotionValue<number>;
 }) {
   const start = index / total;
-  const peak = start + 0.12;
-  const end = start + 0.28;
+  const peak = start + 0.1;
+  const end = start + 0.25;
 
   const scale = useTransform(
     progress,
     [start, peak, end],
-    [0.9, 1.12, 0.9]
+    [0.94, 1.06, 0.94]
   );
 
   const opacity = useTransform(
     progress,
     [start, peak, end],
-    [0.55, 1, 0.55]
+    [0.6, 1, 0.6]
   );
 
-  // Text: yellow-300 when active
   const color = useTransform(
     progress,
     [start, peak, end],
-    ["#ffffffcc", "#fde047", "#ffffffcc"]
+    [
+      "rgba(255,255,255,0.75)",
+      "#fde047",
+      "rgba(255,255,255,0.75)",
+    ]
   );
 
-  // Border: yellow-300 when active
   const borderColor = useTransform(
     progress,
     [start, peak, end],
     [
-      "rgba(253, 224, 71, 0)",
-      "#fde047",
-      "rgba(253, 224, 71, 0)",
+      "rgba(253,224,71,0)",
+      "rgba(253,224,71,0.8)",
+      "rgba(253,224,71,0)",
     ]
   );
 
-  // Yellow glow when active
   const boxShadow = useTransform(
     progress,
     [start, peak, end],
     [
       "0 0 0px rgba(253,224,71,0)",
-      "0 0 14px rgba(253,224,71,0.3)",
+      "0 0 10px rgba(253,224,71,0.25)",
       "0 0 0px rgba(253,224,71,0)",
     ]
   );
@@ -125,17 +120,16 @@ function SkillItem({
       className="
         origin-center
         whitespace-nowrap
-        rounded-lg
+        rounded-md
         border
-        border-transparent
         bg-[#10132E]
-        px-3
-        py-2
+        px-2
+        py-1.5
         text-center
-        text-xs
-        sm:text-sm
-        lg:px-4
-        lg:py-3
+        text-[10px]
+        sm:text-xs
+        lg:px-2
+        lg:py-2
       "
     >
       {skill}

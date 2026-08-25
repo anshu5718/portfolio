@@ -147,7 +147,7 @@ export const BentoGridItem = ({
 
           {/* Skills */}
           {id === 3 && (
-            <div className="relative z-50">
+            <div className="relative z-50 h-full mt-0">
               <SkillsScroll />
             </div>
           )}

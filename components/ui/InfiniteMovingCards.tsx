@@ -14,6 +14,7 @@ interface InfiniteMovingCardsProps {
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
+  pauseOnPress?: boolean;
   className?: string;
 }
 
@@ -22,6 +23,7 @@ export const InfiniteMovingCards = ({
   direction = "left",
   speed = "fast",
   pauseOnHover = true,
+  pauseOnPress = true,
   className,
 }: InfiniteMovingCardsProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -85,7 +87,8 @@ export const InfiniteMovingCards = ({
         className={cn(
           "flex w-max min-w-full shrink-0 flex-nowrap gap-5 py-4",
           start && "animate-scroll",
-          pauseOnHover && "hover:[animation-play-state:paused]"
+          pauseOnHover && "hover:[animation-play-state:paused]",
+          pauseOnPress && "active:[animation-play-state:paused]"
         )}
       >
         {items.map((item) => (
